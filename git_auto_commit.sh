@@ -5,7 +5,7 @@ if ! git rev-parse --is-inside-work-tree; then
     echo "Error: Not inside a Git repository."
     echo "Current Directory: $(pwd)"
     echo "Git Version: $(git --version)"
-    pause
+    sleep 10
 fi
 
 # Get the list of existing branches (Windows-compatible version)
@@ -38,7 +38,8 @@ echo "Enter commit message:"
 read -r COMMIT_MSG
 
 # If no message is provided, use a default one
-COMMIT_MSG=${COMMIT_MSG:-"Automated commit on $(date)"}
+DATE = date -I 
+COMMIT_MSG=${COMMIT_MSG:-"Automated commit on ${DATE}"}
 
 # Check if there are changes
 if git diff --quiet && git diff --staged --quiet; then
@@ -57,4 +58,4 @@ git push origin "$BRANCH"
 
 echo "Changes have been committed and pushed to '$BRANCH' successfully!"
 
-pause
+sleep 10
