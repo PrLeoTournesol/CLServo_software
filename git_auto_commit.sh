@@ -39,7 +39,7 @@ echo "Enter commit message:"
 read -r COMMIT_MSG
 
 # If no message is provided, use a default one
-COMMIT_MSG=${COMMIT_MSG:-"Automated commit on $(date +"%m-%d-%Y")"}
+COMMIT_MSG=${COMMIT_MSG:-"Automated commit on $(date +"%m-%d-%Y %H:%M")"}
 
 # Check if there are changes
 if git diff --quiet && git diff --staged --quiet; then
