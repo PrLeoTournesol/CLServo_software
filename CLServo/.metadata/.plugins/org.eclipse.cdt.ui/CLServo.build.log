@@ -1,0 +1,10 @@
+22:06:45 **** Incremental Build of configuration Debug for project CLServo ****
+make -j12 all 
+arm-none-eabi-size  CLServo.elf 
+   text	   data	    bss	    dec	    hex	filename
+  20292	     20	   2212	  22524	   57fc	CLServo.elf
+Finished building: default.size.stdout
+ 
+
+22:06:46 Build Finished. 0 errors, 0 warnings. (took 432ms)
+

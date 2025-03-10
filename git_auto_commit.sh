@@ -45,18 +45,19 @@ COMMIT_MSG=${COMMIT_MSG:-"Automated commit"}
 COMMIT_MSG="$COMMIT_MSG ($(date +"%d-%m-%Y %H:%M"))"
 
 
+# Add all changes
+git add .
+
+# Commit changes
+git commit -m "$COMMIT_MSG"
+
+
 # Check if there are changes
 if git diff --quiet && git diff --staged --quiet; then
     echo "No changes to commit."
     sleep 10
     exit 0
 fi
-
-# Add all changes
-git add .
-
-# Commit changes
-git commit -m "$COMMIT_MSG"
 
 # Push to the selected branch
 git push --force origin "$BRANCH"
