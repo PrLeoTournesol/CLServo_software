@@ -42,7 +42,7 @@ read -r COMMIT_MSG
 COMMIT_MSG=${COMMIT_MSG:-"Automated commit"}
 
 # Append the current date to the commit message
-COMMIT_MSG="$COMMIT_MSG ($(date +"%m-%d-%Y %H:%M"))"
+COMMIT_MSG="$COMMIT_MSG ($(date +"%d-%m-%Y %H:%M"))"
 
 
 # Check if there are changes
