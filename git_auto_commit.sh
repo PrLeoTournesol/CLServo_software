@@ -6,7 +6,7 @@ if ! git rev-parse --is-inside-work-tree; then
     echo "Current Directory: $(pwd)"
     echo "Git Version: $(git --version)"
     sleep 10
-    exit 0
+    exit 1
 fi
 
 # Get the list of existing branches (Windows-compatible version)
