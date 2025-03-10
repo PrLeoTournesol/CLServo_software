@@ -55,7 +55,7 @@ git add .
 git commit -m "$COMMIT_MSG"
 
 # Push to the selected branch
-git push --force-with-lease origin "$BRANCH"
+git push --force origin "$BRANCH"
 
 echo "Changes have been committed and pushed to '$BRANCH' successfully!"
 
