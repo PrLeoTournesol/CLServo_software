@@ -9,7 +9,7 @@ if ! git rev-parse --is-inside-work-tree; then
 fi
 
 # Get the list of existing branches (Windows-compatible version)
-EXISTING_BRANCHES=$(git branch --all | sed 's|remotes/origin/||' | sed 's|\*||' | sort -u)
+EXISTING_BRANCHES=$(git branch -r | sed 's|remotes/origin/||' | sed 's|\*||' | sort -u)
 
 # Set default branch
 DEFAULT_BRANCH="main"
